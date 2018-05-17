@@ -6,7 +6,9 @@ app:
     links:
         - redis
     ports:
-        - "8000:8000"
+        - "81:8000"
+    restart: unless-stopped
 
 redis:
     image: redis
+    restart: unless-stopped
